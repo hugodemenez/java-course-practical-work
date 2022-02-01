@@ -1,8 +1,8 @@
 package fr.isen.java2.db.daos;
 
-import javax.sql.DataSource;
-
 import org.sqlite.SQLiteDataSource;
+
+import javax.sql.DataSource;
 
 public class DataSourceFactory {
 
