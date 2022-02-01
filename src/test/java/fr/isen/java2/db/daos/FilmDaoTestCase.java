@@ -1,20 +1,20 @@
 package fr.isen.java2.db.daos;
 
+import fr.isen.java2.db.entities.Film;
+import fr.isen.java2.db.entities.Genre;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.List;
 
-import fr.isen.java2.db.entities.Film;
-import fr.isen.java2.db.entities.Genre;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.*;
-import static org.assertj.core.api.Assertions.tuple;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FilmDaoTestCase {
+
 	private FilmDao filmDao = new FilmDao();
 
 	@Before
