@@ -14,7 +14,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FilmDaoTestCase {
-	private FilmDao filmDao = new FilmDao();
+	private final FilmDao filmDao = new FilmDao();
 
 	@Before
 	public void initDb() throws Exception {
