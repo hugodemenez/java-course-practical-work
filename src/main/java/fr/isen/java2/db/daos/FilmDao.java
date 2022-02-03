@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static fr.isen.java2.db.daos.DataSourceFactory.getDataSource;
+import static fr.isen.java2.db.daos.DataSourceFactory.getConnection;
 
 public class FilmDao {
 
@@ -15,7 +15,7 @@ public class FilmDao {
 	public List<Film> listFilms() {
 		List<Film> listOfFilms = new ArrayList<>();
 
-		try(Connection connection = getDataSource().getConnection()){
+		try(Connection connection = getConnection()){
 			try(Statement statement = connection.createStatement()){
 				try(ResultSet results = statement.executeQuery("SELECT * FROM film JOIN genre ON film.genre_id = genre.idgenre")){
 					while(results.next()){
@@ -45,7 +45,7 @@ public class FilmDao {
 	public List<Film> listFilmsByGenre(String genreName) {
 		List<Film> listOfFilms = new ArrayList<>();
 
-		try(Connection connection = getDataSource().getConnection()){
+		try(Connection connection = getConnection()){
 			try(PreparedStatement statement = connection.prepareStatement(
 					"SELECT * FROM film JOIN genre ON film.genre_id = genre.idgenre WHERE genre.name = ?")){
 				statement.setString(1,genreName);
@@ -74,7 +74,7 @@ public class FilmDao {
 	}
 
 	public Film addFilm(Film film) {
-		try (Connection connection = getDataSource().getConnection()){
+		try (Connection connection = getConnection()){
 			String sqlQuery = "INSERT INTO film(title,release_date,genre_id,duration,director,summary) VALUES(?,?,?,?,?,?)";
 
 			try(PreparedStatement statement = connection.prepareStatement(

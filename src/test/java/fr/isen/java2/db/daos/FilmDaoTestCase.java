@@ -1,25 +1,24 @@
 package fr.isen.java2.db.daos;
 
+import fr.isen.java2.db.entities.Film;
+import fr.isen.java2.db.entities.Genre;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.List;
 
-import fr.isen.java2.db.entities.Film;
-import fr.isen.java2.db.entities.Genre;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.*;
-import static org.assertj.core.api.Assertions.tuple;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FilmDaoTestCase {
 	private FilmDao filmDao = new FilmDao();
 
 	@Before
 	public void initDb() throws Exception {
-		Connection connection = DataSourceFactory.getDataSource().getConnection();
+		Connection connection = DataSourceFactory.getConnection();
 		Statement stmt = connection.createStatement();
 		stmt.executeUpdate(
 				"CREATE TABLE IF NOT EXISTS genre (idgenre INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , name VARCHAR(50) NOT NULL);");
@@ -67,7 +66,7 @@ public class FilmDaoTestCase {
 
 		 filmDao.addFilm(film);
 		 // THEN
-		 Connection connection = DataSourceFactory.getDataSource().getConnection();
+		 Connection connection = DataSourceFactory.getConnection();
 		 Statement statement = connection.createStatement();
 		 ResultSet resultSet = statement.executeQuery("SELECT * FROM film WHERE title='Test'");
 		 assertThat(resultSet.next()).isTrue();

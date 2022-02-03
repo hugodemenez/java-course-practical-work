@@ -1,19 +1,20 @@
 package fr.isen.java2.db.daos;
 
+import fr.isen.java2.db.entities.Genre;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.isen.java2.db.entities.Genre;
+import static fr.isen.java2.db.daos.DataSourceFactory.getConnection;
 
-import static fr.isen.java2.db.daos.DataSourceFactory.getDataSource;
 
 public class GenreDao {
 
 	public List<Genre> listGenres() {
 		List<Genre> listofGenres = new ArrayList<>();
 
-		try(Connection connection = getDataSource().getConnection()){
+		try(Connection connection = getConnection()){
 			try(Statement statement = connection.createStatement()){
 				try(ResultSet results = statement.executeQuery("SELECT * FROM genre")){
 					while (results.next()){
@@ -34,7 +35,7 @@ public class GenreDao {
 	public Genre getGenre(String name) {
 
 
-		try(Connection connection = getDataSource().getConnection()){
+		try(Connection connection = getConnection()){
 			try(PreparedStatement statement = connection.prepareStatement("SELECT * FROM genre WHERE name = ?")){
 				statement.setString(1,name);
 				try(ResultSet results = statement.executeQuery()){
@@ -54,7 +55,7 @@ public class GenreDao {
 	}
 
 	public void addGenre(String name) {
-		try (Connection connection = getDataSource().getConnection()){
+		try (Connection connection = getConnection()){
 			String sqlQuery = "insert into genre(name) VALUES(?)";
 
 			try(PreparedStatement statement = connection.prepareStatement(
