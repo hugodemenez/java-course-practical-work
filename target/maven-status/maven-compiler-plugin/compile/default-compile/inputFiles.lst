@@ -1,5 +1,5 @@
-/Users/hugodemenez/IdeaProjects/code/src/main/java/fr/isen/java2/db/daos/GenreDao.java
-/Users/hugodemenez/IdeaProjects/code/src/main/java/fr/isen/java2/db/entities/Genre.java
-/Users/hugodemenez/IdeaProjects/code/src/main/java/fr/isen/java2/db/daos/DataSourceFactory.java
-/Users/hugodemenez/IdeaProjects/code/src/main/java/fr/isen/java2/db/entities/Film.java
-/Users/hugodemenez/IdeaProjects/code/src/main/java/fr/isen/java2/db/daos/FilmDao.java
+/Users/hugodemenez/Downloads/java2_pw-bonus/src/main/java/fr/isen/java2/db/daos/GenreDao.java
+/Users/hugodemenez/Downloads/java2_pw-bonus/src/main/java/fr/isen/java2/db/entities/Film.java
+/Users/hugodemenez/Downloads/java2_pw-bonus/src/main/java/fr/isen/java2/db/daos/FilmDao.java
+/Users/hugodemenez/Downloads/java2_pw-bonus/src/main/java/fr/isen/java2/db/daos/DataSourceFactory.java
+/Users/hugodemenez/Downloads/java2_pw-bonus/src/main/java/fr/isen/java2/db/entities/Genre.java
