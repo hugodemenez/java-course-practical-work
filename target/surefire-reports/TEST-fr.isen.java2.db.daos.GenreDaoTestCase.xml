@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="fr.isen.java2.db.daos.GenreDaoTestCase" time="0.231" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="fr.isen.java2.db.daos.GenreDaoTestCase" time="0.188" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/hugodemenez/IdeaProjects/code"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/hugodemenez/Downloads/java2_pw-bonus"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="FR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/hugodemenez/IdeaProjects/code"/>
+    <property name="user.dir" value="/Users/hugodemenez/Downloads/java2_pw-bonus"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="17.0.2+8-LTS-86"/>
     <property name="os.arch" value="aarch64"/>
@@ -59,8 +59,8 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldListGenres" time="0.224"/>
-  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldGetGenreByName" time="0.003"/>
-  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldNotGetUnknownGenre" time="0.001"/>
-  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldAddGenre" time="0.003"/>
+  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldListGenres" time="0.18"/>
+  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldGetGenreByName" time="0.004"/>
+  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldNotGetUnknownGenre" time="0.002"/>
+  <testcase classname="fr.isen.java2.db.daos.GenreDaoTestCase" name="shouldAddGenre" time="0.002"/>
 </testsuite>
